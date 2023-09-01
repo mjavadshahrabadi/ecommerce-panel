@@ -2,6 +2,7 @@ import React from 'react'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { Sidebar } from '@/components/ui/Sidebar'
+import { ThemesProvider } from '@/components/ui/Themes'
 import './globals.css'
 
 const yekanFont = localFont({
@@ -22,9 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${yekanFont.variable} font-sans`}>
-        <Sidebar />
-        {children}
+      <body
+        className={`${yekanFont.variable} font-sans bg-gray-100 w-full h-screen`}
+      >
+        <ThemesProvider attribute="class" enableSystem>
+          <main className="grid grid-cols-12">
+            <Sidebar />
+            <>{children}</>
+          </main>
+        </ThemesProvider>
       </body>
     </html>
   )
