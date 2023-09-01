@@ -1,12 +1,17 @@
-import React from "react";
-import './globals.css'
+import React from 'react'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
+import { Sidebar } from '@/components/ui/Sidebar'
+import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const yekanFont = localFont({
+  src: '../assets/fonts/yekan.woff2',
+  display: 'swap',
+  variable: '--font-yekan',
+})
 
 export const metadata: Metadata = {
-  title: 'Ecommerce panel',
+  title: 'پنل مدیریت فروشگاه',
   description: 'Ecommerce panel template',
 }
 
@@ -17,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${yekanFont.variable} font-sans`}>
+        <Sidebar />
+        {children}
+      </body>
     </html>
   )
 }
