@@ -10,9 +10,9 @@ export const DropdownList: FC<DropdownListProps> = ({
 }): ReactElement => {
   return (
     <ul
-      className={`absolute top-16 right-0 ${
+      className={`absolute right-0 border z-50 border-gray-100 ${
         width <= 10 ? 'w-[10rem]' : 'w-[20rem]'
-      } bg-white shadow-xl shadow-gray-200 rounded-md p-3 h-auto flex flex-col space-y-3`}
+      } bg-white shadow-2xl shadow-gray-200 rounded-md p-3 h-auto flex flex-col space-y-3`}
     >
       {children}
     </ul>

@@ -5,8 +5,8 @@ interface DropDownItem {
 }
 export const DropDownItem: FC<DropDownItem> = ({ children }): ReactElement => {
   return (
-    <div className="hover:bg-gray-100 p-2 rounded-md cursor-pointer duration-300 ease-out">
+    <li className="hover:bg-gray-100 p-2 rounded-md cursor-pointer duration-300 ease-out">
       {children}
-    </div>
+    </li>
   )
 }
