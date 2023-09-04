@@ -3,7 +3,8 @@ import React, { FC, ReactElement, useState, useEffect, useRef } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import { DropdownList } from '@/components/ui/DropdownList'
 import { DropDownItem } from '@/components/ui/DropdownList/DropDownItem'
-import { ApexChart } from '@/components/dashboard/TotalRevenue/StrokedGauge'
+import { CompanyGrowthChart } from '@/components/dashboard/TotalRevenue/CompanyGrowthChart'
+import { TotalRevenueChart } from '@/components/dashboard/TotalRevenue/TotalRevenueChart'
 
 export const TotalRevenue: FC = (): ReactElement => {
   const [yearFilterListShow, setYearFilterShow] = useState(false)
@@ -27,9 +28,14 @@ export const TotalRevenue: FC = (): ReactElement => {
   }, [])
 
   return (
-    <div className="bg-white rounded-md shadow-lg shadow-gray-200 grid grid-cols-12 divide-x">
-      <div className="col-span-8">2</div>
-      <div className="col-span-4 p-5 flex flex-col items-center space-y-4">
+    <div className="grid grid-cols-12 items-start gap-5 overflow-hidden">
+      <div className="col-span-8 p-5 overflow-hidden h-[500px] pb-10 bg-white rounded-md shadow-lg shadow-gray-200">
+        <h3 className="text-gray-600 font-semibold text-right mb-2">
+          کل درآمد
+        </h3>
+        <TotalRevenueChart />
+      </div>
+      <div className="col-span-4 p-5 flex flex-col items-center space-y-4 bg-white rounded-md shadow-lg shadow-gray-200">
         <div className="relative text-gray-500 text-[15px]">
           <button
             type="button"
@@ -47,7 +53,7 @@ export const TotalRevenue: FC = (): ReactElement => {
             </DropdownList>
           )}
         </div>
-        <ApexChart />
+        <CompanyGrowthChart />
       </div>
     </div>
   )
