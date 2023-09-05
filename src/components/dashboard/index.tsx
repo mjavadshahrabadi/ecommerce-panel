@@ -8,11 +8,14 @@ import { Revenue } from '@/components/dashboard/Revenue'
 import { ProfileReport } from '@/components/dashboard/ProfileReport'
 import { OrderStatistics } from '@/components/dashboard/OrderStatistics'
 import { TotalBalance } from '@/components/dashboard/ TotalBalance'
+import { Transactions } from '@/components/dashboard/Transactions'
+import { ActivityTimeline } from '@/components/dashboard/ActivityTimeline'
+import { TrafficSource } from '@/components/dashboard/TrafficSource'
 
 export const DashboardSection: FC = (): ReactElement => {
   return (
     <section className="overflow-hidden">
-      <div className="grid grid-cols-12 my-6 gap-5 items-stretch">
+      <div className="grid grid-cols-12 my-6 gap-5 items-start">
         <div className="col-span-8">
           <Congratulations />
         </div>
@@ -30,13 +33,19 @@ export const DashboardSection: FC = (): ReactElement => {
           <ProfileReport />
         </div>
 
-        <div className="col-span-4 bg-red-100">
+        <div className="col-span-4">
           <OrderStatistics />
         </div>
         <div className="col-span-4">
           <TotalBalance />
         </div>
-        <div className="col-span-4 bg-amber-100">3</div>
+        <div className="col-span-4">
+          <Transactions />
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-5">
+        <ActivityTimeline />
+        <TrafficSource />
       </div>
     </section>
   )
