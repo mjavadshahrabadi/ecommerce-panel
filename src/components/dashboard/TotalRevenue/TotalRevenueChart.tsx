@@ -17,8 +17,8 @@ export const TotalRevenueChart: FC = (): ReactElement => {
         <YAxis tickLine={false} fontSize="14px" />
         <Tooltip />
 
-        <Bar dataKey="pv" fill="#818cf8" radius={10} barSize={15} />
-        <Bar dataKey="uv" fill="#5eead4" radius={10} barSize={15} />
+        <Bar dataKey="pv" fill="#818cf8" radius={10} barSize={12} />
+        <Bar dataKey="uv" fill="#d1d5db" radius={10} barSize={12} />
       </BarChart>
     </ResponsiveContainer>
   )

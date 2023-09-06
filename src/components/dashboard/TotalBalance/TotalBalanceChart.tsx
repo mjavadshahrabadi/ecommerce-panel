@@ -20,7 +20,7 @@ export const TotalBalanceChart: FC = (): ReactElement => {
         <Line
           type="monotone"
           dataKey="pv"
-          stroke="#8b5cf6"
+          stroke="#6366f1"
           dot={false}
           strokeWidth={3}
         />

@@ -84,6 +84,20 @@ export const ActivityTimeline: FC = (): ReactElement => {
               در ستون و سطرآنچنان که لازم است.
             </p>
           </li>
+          <li className="mb-10 pr-3">
+            <div className="absolute w-3 h-3 bg-indigo-500 rounded-full mt-1.5 -right-1.5 dark:border-gray-900 dark:bg-gray-700"></div>
+            <time className="mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              مهر ۱۴۰۲
+            </time>
+            <h3 className="text-md font-semibold text-gray-900 dark:text-white">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+            </h3>
+            <p className="mt-1 mb-4 text-sm font-normal text-gray-500 dark:text-gray-400">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است.
+            </p>
+          </li>
           <li className="mb-10 p-3">
             <div className="absolute w-3 h-3 bg-amber-500 rounded-full mt-1.5 -right-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
             <time className="mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">

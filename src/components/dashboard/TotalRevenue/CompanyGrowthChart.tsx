@@ -31,7 +31,7 @@ export const CompanyGrowthChart: FC = (): ReactElement => {
     },
     fill: {
       type: 'solid',
-      colors: ['#8b5cf6'],
+      colors: ['#6366f1'],
     },
     stroke: {
       lineCap: 'round',

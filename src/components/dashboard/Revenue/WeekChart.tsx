@@ -15,7 +15,7 @@ export const WeekChart: FC = (): ReactElement => {
           allowDuplicatedCategory={true}
         />
 
-        <Bar dataKey="pv" fill="#8884d8" radius={2} />
+        <Bar dataKey="pv" fill="#6366f1" radius={2} />
       </BarChart>
     </ResponsiveContainer>
   )
