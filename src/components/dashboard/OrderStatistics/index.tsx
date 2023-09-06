@@ -35,7 +35,7 @@ export const OrderStatistics: FC = (): ReactElement => {
     }
   }, [])
   return (
-    <div className="flex flex-col space-y-7 bg-white p-5 rounded-md shadow-lg shadow-gray-200 relative">
+    <div className="flex flex-col justify-between  space-y-7 bg-white p-5 rounded-md shadow-lg shadow-gray-200 relative h-full">
       <div className="flex items-start justify-between">
         <div className="flex flex-col space-y-1 text-sm text-gray-700">
           <h4 className="font-semibold">آمار سفارش</h4>
@@ -99,6 +99,48 @@ export const OrderStatistics: FC = (): ReactElement => {
           </div>
 
           <h4 className="text-gray-600 text-sm">۱۲ هزار</h4>
+        </div>
+        <div className="flex items-ceneter justify-between">
+          <div className="flex items-center">
+            <div className="w-fit rounded-md p-2 bg-red-100 ml-2">
+              <HomeIcon className="w-5 h-5 text-red-500" />
+            </div>
+
+            <div className="flex flex-col space-y-2 text-[13px] text-gray-600 ">
+              <span className="font-semibold">دکوری</span>
+              <span className="text-[12px]">مجسمه، تابلو</span>
+            </div>
+          </div>
+
+          <h4 className="text-gray-600 text-sm">۹ هزار</h4>
+        </div>
+        <div className="flex items-ceneter justify-between">
+          <div className="flex items-center">
+            <div className="w-fit rounded-md p-2 bg-green-100 ml-2">
+              <TrophyIcon className="w-5 h-5 text-green-500" />
+            </div>
+
+            <div className="flex flex-col space-y-2 text-[13px] text-gray-600 ">
+              <span className="font-semibold">ورزشی</span>
+              <span className="text-[12px]">فوتبال، کیت ورزشی</span>
+            </div>
+          </div>
+
+          <h4 className="text-gray-600 text-sm">۳ هزار</h4>
+        </div>
+        <div className="flex items-ceneter justify-between">
+          <div className="flex items-center">
+            <div className="w-fit rounded-md p-2 bg-violet-100 ml-2">
+              <DevicePhoneMobileIcon className="w-5 h-5 text-violet-500" />
+            </div>
+
+            <div className="flex flex-col space-y-2 text-[13px] text-gray-600 ">
+              <span className="font-semibold">الکترونیک</span>
+              <span className="text-[12px]">موبایل، هدفون، تلویزیون</span>
+            </div>
+          </div>
+
+          <h4 className="text-gray-600 text-sm">۲۲ هزار</h4>
         </div>
         <div className="flex items-ceneter justify-between">
           <div className="flex items-center">

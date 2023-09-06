@@ -1,5 +1,5 @@
 'use client'
-import React, { FC, ReactElement, useState } from 'react'
+import React, { FC, ReactElement, useEffect, useState } from 'react'
 import Image from 'next/image'
 import {
   HomeIcon,
@@ -10,13 +10,28 @@ import {
   ArrowLeftOnRectangleIcon,
 } from '@heroicons/react/24/outline'
 import { SideItem } from '@/components/ui/Sidebar/SideItem'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export const Sidebar: FC = (): ReactElement => {
   const [isHovered, setIsHovered] = useState(false)
-  const [activeId, setActiveId] = useState(1)
+  const [activeId, setActiveId] = useState<number>(1)
+  const uriPath = usePathname()
   const handleMouseEvent = () => {
     setIsHovered((prev) => !prev)
   }
+
+  useEffect(() => {
+    if (uriPath) {
+      switch (uriPath) {
+        case '/users':
+          setActiveId(() => 3)
+          break
+        default:
+          setActiveId(1)
+      }
+    }
+  }, [uriPath])
 
   const activeNavItemHandler = (id: number) => setActiveId(id)
 
@@ -54,19 +69,21 @@ export const Sidebar: FC = (): ReactElement => {
             />
           </div>
         </li>
-        <SideItem
-          isHovered={isHovered}
-          title="داشبورد"
-          id={1}
-          activeId={activeId}
-          activeNavItemHandler={activeNavItemHandler}
-        >
-          <HomeIcon
-            className={`w-5 h-5 ${
-              activeId === 1 ? 'text-indigo-500' : 'text-gray-500'
-            }`}
-          />
-        </SideItem>
+        <Link href="/" className="w-full">
+          <SideItem
+            isHovered={isHovered}
+            title="داشبورد"
+            id={1}
+            activeId={activeId}
+            activeNavItemHandler={activeNavItemHandler}
+          >
+            <HomeIcon
+              className={`w-5 h-5 ${
+                activeId === 1 ? 'text-indigo-500' : 'text-gray-500'
+              }`}
+            />
+          </SideItem>
+        </Link>
         <SideItem
           isHovered={isHovered}
           title="ایمیل"
@@ -81,19 +98,21 @@ export const Sidebar: FC = (): ReactElement => {
           />
         </SideItem>
 
-        <SideItem
-          isHovered={isHovered}
-          title="کاربران"
-          id={3}
-          activeId={activeId}
-          activeNavItemHandler={activeNavItemHandler}
-        >
-          <UserIcon
-            className={`w-5 h-5 ${
-              activeId === 3 ? 'text-indigo-500' : 'text-gray-500'
-            }`}
-          />
-        </SideItem>
+        <Link href="/users" className="w-full">
+          <SideItem
+            isHovered={isHovered}
+            title="کاربران"
+            id={3}
+            activeId={activeId}
+            activeNavItemHandler={activeNavItemHandler}
+          >
+            <UserIcon
+              className={`w-5 h-5 ${
+                activeId === 3 ? 'text-indigo-500' : 'text-gray-500'
+              }`}
+            />
+          </SideItem>
+        </Link>
 
         <SideItem
           isHovered={isHovered}

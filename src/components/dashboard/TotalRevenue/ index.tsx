@@ -28,14 +28,14 @@ export const TotalRevenue: FC = (): ReactElement => {
   }, [])
 
   return (
-    <div className="grid grid-cols-12 items-start gap-5 overflow-hidden">
+    <div className="grid grid-cols-12 gap-5 overflow-hidden">
       <div className="col-span-8 p-5 overflow-hidden h-[400px] pb-10 bg-white rounded-md shadow-lg shadow-gray-200">
         <h3 className="text-gray-600 font-semibold text-right mb-2">
           کل درآمد
         </h3>
         <TotalRevenueChart />
       </div>
-      <div className="col-span-4 p-5 flex flex-col items-center space-y-4 bg-white rounded-md shadow-lg shadow-gray-200">
+      <div className="col-span-4 p-5 flex flex-col items-center justify-center space-y-4 bg-white rounded-md shadow-lg shadow-gray-200">
         <div className="relative text-gray-500 text-[15px]">
           <button
             type="button"
