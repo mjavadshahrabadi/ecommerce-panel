@@ -1,10 +1,9 @@
 import React, { FC, ReactElement } from 'react'
-import { data as browsersData } from '@/constants/dashboard/browsers'
+import { data as osData } from '@/constants/dashboard/os'
 import Image from 'next/image'
 import { Progressbar } from '@/components/ui/Progressbar'
-import { count } from 'd3-array'
 
-export const BrowsersList: FC = (): ReactElement => {
+export const Os: FC = (): ReactElement => {
   return (
     <div className="relative overflow-x-auto">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -25,33 +24,33 @@ export const BrowsersList: FC = (): ReactElement => {
           </tr>
         </thead>
         <tbody>
-          {browsersData &&
-            browsersData.map((browser) => (
+          {osData &&
+            osData.map((os) => (
               <tr
                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                key={browser.num}
+                key={os.num}
               >
                 <th
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  {browser.num}
+                  {os.num}
                 </th>
                 <td className="px-6 py-4 flex items-center space-x-2">
                   <Image
-                    src={browser.imgSrc}
-                    alt={browser.browser}
+                    src={os.imgSrc}
+                    alt={os.osName}
                     className="w-6 h-6"
                     width={100}
                     height={100}
                   />
-                  <span>{browser.browser}</span>
+                  <span>{os.osName}</span>
                 </td>
                 <td className="px-6 pynom-4" dir="rtl">
-                  {browser.visits} هزار
+                  {os.visits} هزار
                 </td>
                 <td className="px-6 py-4">
-                  <Progressbar percentage={browser.dataInPercentage} />
+                  <Progressbar percentage={os.dataInPercentage} />
                 </td>
               </tr>
             ))}

@@ -1,0 +1,58 @@
+export const data = [
+  {
+    num: 1,
+    country: 'USA',
+    visits: '۲۵۵',
+    dataInPercentage: 90,
+    imgSrc: '/vector/dashboard/country/us.svg',
+  },
+  {
+    num: 2,
+    country: 'Brazil',
+    visits: '۲۰۰',
+    dataInPercentage: 80,
+    imgSrc: '/vector/dashboard/country/br.svg',
+  },
+  {
+    num: 3,
+    country: 'India',
+    visits: '۱۵۰',
+    dataInPercentage: 70,
+    imgSrc: '/vector/dashboard/country/in.svg',
+  },
+  {
+    num: 4,
+    country: 'Australia',
+    visits: '۱۰۰',
+    dataInPercentage: 60,
+    imgSrc: '/vector/dashboard/country/au.svg',
+  },
+  {
+    num: 5,
+    country: 'Germany',
+    visits: '۵۰',
+    dataInPercentage: 50,
+    imgSrc: '/vector/dashboard/country/de.svg',
+  },
+  {
+    num: 6,
+    country: 'France',
+    visits: '۳۰',
+    dataInPercentage: 40,
+    imgSrc: '/vector/dashboard/country/fr.svg',
+  },
+  {
+    num: 7,
+    country: 'Portugal',
+    visits: '۲۵۵',
+    dataInPercentage: 30,
+    imgSrc: '/vector/dashboard/country/pt.svg',
+  },
+  {
+    num: 8,
+    country: 'China',
+    visits: '۱۰',
+    dataInPercentage: 20,
+    imgSrc: '/vector/dashboard/country/cn.svg',
+  },
+]

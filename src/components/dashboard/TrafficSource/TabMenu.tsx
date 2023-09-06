@@ -1,6 +1,8 @@
 'use client'
 import React, { FC, ReactElement, useState } from 'react'
 import { BrowsersList } from '@/components/dashboard/TrafficSource/BrowsersList'
+import { Os } from '@/components/dashboard/TrafficSource/Os'
+import { Country } from '@/components/dashboard/TrafficSource/Country'
 
 const tabs = [
   {
@@ -39,6 +41,8 @@ export const TabMenu: FC = (): ReactElement => {
           ))}
       </ul>
       {selectedTab === 1 && <BrowsersList />}
+      {selectedTab === 2 && <Os />}
+      {selectedTab === 3 && <Country />}
     </div>
   )
 }
