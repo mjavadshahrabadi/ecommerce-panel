@@ -3,7 +3,7 @@ import { TabMenu } from '@/components/ui/TabMenu'
 import { totalBalanceTabList } from '@/constants/dashboard/totalBalanceTabList'
 import { WalletIcon } from '@heroicons/react/24/outline'
 import { PercentageStatus } from '@/components/ui/PercentageStatus'
-import { TotalBalanceChart } from '@/components/dashboard/ TotalBalance/TotalBalanceChart'
+import { TotalBalanceChart } from '@/components/dashboard/TotalBalance/TotalBalanceChart'
 
 export const TotalBalance: FC = (): ReactElement => {
   return (

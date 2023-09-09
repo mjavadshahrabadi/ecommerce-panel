@@ -46,7 +46,7 @@ export const Os: FC = (): ReactElement => {
                   />
                   <span>{os.osName}</span>
                 </td>
-                <td className="px-6 pynom-4" dir="rtl">
+                <td className="px-6 py-4" dir="rtl">
                   {os.visits} هزار
                 </td>
                 <td className="px-6 py-4">

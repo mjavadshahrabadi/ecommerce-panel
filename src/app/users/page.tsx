@@ -1,6 +1,7 @@
 import { Header } from '@/components/ui/Header'
 import { UserTypes } from '@/components/users/UserTypes'
 import { SearchFilter } from '@/components/users/SearchFilter'
+import { UsersTable } from '@/components/users/UsersTable'
 
 export default function UsersPage() {
   return (
@@ -8,6 +9,7 @@ export default function UsersPage() {
       <Header />
       <UserTypes />
       <SearchFilter />
+      <UsersTable />
     </section>
   )
 }

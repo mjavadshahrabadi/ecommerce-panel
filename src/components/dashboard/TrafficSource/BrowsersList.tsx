@@ -2,7 +2,6 @@ import React, { FC, ReactElement } from 'react'
 import { data as browsersData } from '@/constants/dashboard/browsers'
 import Image from 'next/image'
 import { Progressbar } from '@/components/ui/Progressbar'
-import { count } from 'd3-array'
 
 export const BrowsersList: FC = (): ReactElement => {
   return (

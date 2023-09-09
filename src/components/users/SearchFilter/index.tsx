@@ -12,7 +12,7 @@ export const SearchFilter: FC = (): ReactElement => {
 
   return (
     <div
-      className="p-5 bg-white shadow-md shadow-gray-200 rounded-md flex flex-col space-y-4"
+      className="px-5 py-8 bg-white shadow-md shadow-gray-200 rounded-tr-md rounded-tl-md flex flex-col space-y-4"
       dir="rtl"
     >
       <h4 className="text-[15px] font-semibold text-gray-700">فیلتر جستجو</h4>
