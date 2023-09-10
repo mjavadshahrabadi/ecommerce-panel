@@ -3,7 +3,6 @@ import React, { FC, ReactElement, useEffect, useState } from 'react'
 import Image from 'next/image'
 import {
   HomeIcon,
-  EnvelopeIcon,
   UserIcon,
   ReceiptPercentIcon,
   CheckBadgeIcon,
@@ -24,14 +23,20 @@ export const Sidebar: FC = (): ReactElement => {
   useEffect(() => {
     if (uriPath) {
       switch (uriPath) {
+        case '/':
+          setActiveId(1)
+          break
         case '/users':
+          setActiveId(2)
+          break
+        case '/invoice':
           setActiveId(3)
           break
         case '/roles':
-          setActiveId(5)
+          setActiveId(4)
           break
         default:
-          setActiveId(1)
+          setActiveId(5)
       }
     }
   }, [uriPath])
@@ -92,13 +97,13 @@ export const Sidebar: FC = (): ReactElement => {
           <SideItem
             isHovered={isHovered}
             title="کاربران"
-            id={3}
+            id={2}
             activeId={activeId}
             activeNavItemHandler={activeNavItemHandler}
           >
             <UserIcon
               className={`w-5 h-5 ${
-                activeId === 3 ? 'text-indigo-500' : 'text-gray-500'
+                activeId === 2 ? 'text-indigo-500' : 'text-gray-500'
               }`}
             />
           </SideItem>
@@ -108,13 +113,13 @@ export const Sidebar: FC = (): ReactElement => {
           <SideItem
             isHovered={isHovered}
             title="صورتحساب ها"
-            id={4}
+            id={3}
             activeId={activeId}
             activeNavItemHandler={activeNavItemHandler}
           >
             <ReceiptPercentIcon
               className={`w-5 h-5 ${
-                activeId === 4 ? 'text-indigo-500' : 'text-gray-500'
+                activeId === 3 ? 'text-indigo-500' : 'text-gray-500'
               }`}
             />
           </SideItem>
@@ -124,32 +129,34 @@ export const Sidebar: FC = (): ReactElement => {
           <SideItem
             isHovered={isHovered}
             title="نقش ها و اجازه ها"
-            id={5}
+            id={4}
             activeId={activeId}
             activeNavItemHandler={activeNavItemHandler}
           >
             <CheckBadgeIcon
               className={`w-5 h-5 ${
-                activeId === 5 ? 'text-indigo-500' : 'text-gray-500'
+                activeId === 4 ? 'text-indigo-500' : 'text-gray-500'
               }`}
             />
           </SideItem>
         </Link>
       </nav>
       <div className="absolute bottom-0 right-0 left-0 p-4">
-        <SideItem
-          isHovered={isHovered}
-          title="خروج از حساب کاربری"
-          id={6}
-          activeId={activeId}
-          activeNavItemHandler={activeNavItemHandler}
-        >
-          <ArrowLeftOnRectangleIcon
-            className={`w-5 h-5 ${
-              activeId === 6 ? 'text-indigo-500' : 'text-gray-500'
-            }`}
-          />
-        </SideItem>
+        <Link href="/login" className="w-full">
+          <SideItem
+            isHovered={isHovered}
+            title="خروج از حساب کاربری"
+            id={5}
+            activeId={activeId}
+            activeNavItemHandler={activeNavItemHandler}
+          >
+            <ArrowLeftOnRectangleIcon
+              className={`w-5 h-5 ${
+                activeId === 5 ? 'text-indigo-500' : 'text-gray-500'
+              }`}
+            />
+          </SideItem>
+        </Link>
       </div>
     </aside>
   )

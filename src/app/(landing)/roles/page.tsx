@@ -3,6 +3,12 @@ import { RolesHeader } from '@/components/roles/RolesHeader'
 import { RolesTypeList } from '@/components/roles/RolesTypeList'
 import { DataTable } from '@/components/users/UsersTable/DataTable'
 import { TableHeaderFilter } from '@/components/users/UsersTable/TableHeaderFilter'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'نقش ها',
+  description: 'Designed By Javad Shahrabadi :)',
+}
 
 export default function RolesPage() {
   return (

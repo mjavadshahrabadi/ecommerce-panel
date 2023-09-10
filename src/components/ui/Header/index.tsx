@@ -13,6 +13,7 @@ import { SearchBox } from '@/components/ui/Header/SearchBox'
 import { DropdownList } from '@/components/ui/DropdownList'
 import { DropDownItem } from '@/components/ui/DropdownList/DropDownItem'
 import { NotificationItem } from '@/components/ui/Header/NotificationItem'
+import Link from 'next/link'
 
 export const Header: FC = (): ReactElement => {
   const [isFocused, setIsFocused] = useState(false)
@@ -126,16 +127,18 @@ export const Header: FC = (): ReactElement => {
                     </div>
                   </li>
                 </DropDownItem>
-                <DropDownItem>
-                  <li className="flex items-center justify-between">
-                    <div>
-                      <ArrowLeftOnRectangleIcon className="w-5 h-5 text-gray-600" />
-                    </div>
-                    <div>
-                      <h4 className="text-[14px] text-gray-700">خروج</h4>
-                    </div>
-                  </li>
-                </DropDownItem>
+                <Link href="/login" className="w-full">
+                  <DropDownItem>
+                    <li className="flex items-center justify-between">
+                      <div>
+                        <ArrowLeftOnRectangleIcon className="w-5 h-5 text-gray-600" />
+                      </div>
+                      <div>
+                        <h4 className="text-[14px] text-gray-700">خروج</h4>
+                      </div>
+                    </li>
+                  </DropDownItem>
+                </Link>
               </DropdownList>
             )}
           </div>

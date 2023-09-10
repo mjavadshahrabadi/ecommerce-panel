@@ -78,12 +78,14 @@ export const LoginForm: FC = (): ReactElement => {
             />
           </div>
 
-          <button
-            typeof="button"
-            className="bg-indigo-500 text-white text-[14px] rounded-md py-2 px-4 hover:bg-indigo-600 duration-300 ease-out active:scale-95"
-          >
-            ورود به حساب کاربری
-          </button>
+          <Link href="/">
+            <button
+              typeof="button"
+              className="bg-indigo-500 text-white text-[14px] rounded-md py-2 px-4 hover:bg-indigo-600 duration-300 ease-out active:scale-95"
+            >
+              ورود به حساب کاربری
+            </button>
+          </Link>
 
           <p className="text-right text-gray-600 text-sm">
             حساب کاربری ندارید؟{' '}

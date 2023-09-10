@@ -11,11 +11,6 @@ const yekanFont = localFont({
   variable: '--font-yekan',
 })
 
-export const metadata: Metadata = {
-  title: 'پنل مدیریت فروشگاه',
-  description: 'Ecommerce panel template',
-}
-
 export default function RootLayout({
   children,
 }: {

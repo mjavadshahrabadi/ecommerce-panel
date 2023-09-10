@@ -1,54 +1,34 @@
 import React, { FC, ReactElement } from 'react'
-import ReactApexChart from 'react-apexcharts'
-import { ApexOptions } from 'apexcharts'
 import { WalletIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline'
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
+import 'react-circular-progressbar/dist/styles.css'
+import { digitsEnToFa } from '@persian-tools/persian-tools'
 
 export const CompanyGrowthChart: FC = (): ReactElement => {
-  const chartOptions: ApexOptions = {
-    chart: {
-      height: 200,
-      type: 'bar',
-      offsetY: -15,
-    },
-    plotOptions: {
-      radialBar: {
-        startAngle: -135,
-        endAngle: 135,
-        dataLabels: {
-          name: {
-            fontSize: '16px',
-            color: undefined,
-          },
-          value: {
-            fontSize: '16px',
-            color: undefined,
-            formatter: (val) => {
-              return val + '%'
-            },
-          },
-        },
-      },
-    },
-    fill: {
-      type: 'solid',
-      colors: ['#6366f1'],
-    },
-    stroke: {
-      lineCap: 'round',
-    },
-    labels: [''],
-  }
-
-  const chartSeries = [62]
-
   return (
-    <div id="chart" className="flex flex-col items-center" dir="rtl">
-      <ReactApexChart
-        options={chartOptions}
-        series={chartSeries}
-        type="radialBar"
-        height={200}
-      />
+    <div
+      id="chart"
+      className="w-full flex flex-col items-center space-y-4 pt-3"
+      dir="rtl"
+    >
+      <div className="w-32 h-32">
+        <CircularProgressbar
+          value={62}
+          text={`${digitsEnToFa(62)}%`}
+          styles={buildStyles({
+            // Rotation of path and trail, in number of turns (0-1)
+            rotation: 1,
+            strokeLinecap: 'round',
+            textSize: '14px',
+            pathTransitionDuration: 0.5,
+
+            pathColor: '#6366f1',
+            textColor: '#374151',
+            trailColor: '#e5e7eb',
+            backgroundColor: '#3e98c7',
+          })}
+        />
+      </div>
       <span className="text-sm text-gray-700">۶۲ درصد رشد شرکت</span>
 
       <div className="flex items-center justify-evenly mt-6 w-full">
