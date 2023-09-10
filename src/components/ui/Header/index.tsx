@@ -117,16 +117,20 @@ export const Header: FC = (): ReactElement => {
             />
             {avatarDropDownListShow && (
               <DropdownList width={10}>
-                <DropDownItem>
-                  <li className="flex items-center justify-between">
-                    <div>
-                      <UserIcon className="w-5 h-5 text-gray-600" />
-                    </div>
-                    <div>
-                      <h4 className="text-[14px] text-gray-700">پروفایل من</h4>
-                    </div>
-                  </li>
-                </DropDownItem>
+                <Link href="/profile">
+                  <DropDownItem>
+                    <li className="flex items-center justify-between">
+                      <div>
+                        <UserIcon className="w-5 h-5 text-gray-600" />
+                      </div>
+                      <div>
+                        <h4 className="text-[14px] text-gray-700">
+                          پروفایل من
+                        </h4>
+                      </div>
+                    </li>
+                  </DropDownItem>
+                </Link>
                 <Link href="/login" className="w-full">
                   <DropDownItem>
                     <li className="flex items-center justify-between">
