@@ -3,10 +3,10 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { Sidebar } from '@/components/ui/Sidebar'
 import { ThemesProvider } from '@/components/ui/Themes'
-import './globals.css'
+import '../globals.css'
 
 const yekanFont = localFont({
-  src: '../assets/fonts/yekan.woff2',
+  src: '../../assets/fonts/yekan.woff2',
   display: 'swap',
   variable: '--font-yekan',
 })
@@ -29,7 +29,7 @@ export default function RootLayout({
         <ThemesProvider attribute="class" enableSystem>
           <main className="grid grid-cols-12">
             <Sidebar />
-            <>{children}</>
+            {children}
           </main>
         </ThemesProvider>
       </body>

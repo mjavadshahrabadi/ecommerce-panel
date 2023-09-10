@@ -25,7 +25,10 @@ export const Sidebar: FC = (): ReactElement => {
     if (uriPath) {
       switch (uriPath) {
         case '/users':
-          setActiveId(() => 3)
+          setActiveId(3)
+          break
+        case '/roles':
+          setActiveId(5)
           break
         default:
           setActiveId(1)
@@ -84,19 +87,6 @@ export const Sidebar: FC = (): ReactElement => {
             />
           </SideItem>
         </Link>
-        <SideItem
-          isHovered={isHovered}
-          title="ایمیل"
-          id={2}
-          activeId={activeId}
-          activeNavItemHandler={activeNavItemHandler}
-        >
-          <EnvelopeIcon
-            className={`w-5 h-5 ${
-              activeId === 2 ? 'text-indigo-500' : 'text-gray-500'
-            }`}
-          />
-        </SideItem>
 
         <Link href="/users" className="w-full">
           <SideItem
@@ -114,33 +104,37 @@ export const Sidebar: FC = (): ReactElement => {
           </SideItem>
         </Link>
 
-        <SideItem
-          isHovered={isHovered}
-          title="صورتحساب ها"
-          id={4}
-          activeId={activeId}
-          activeNavItemHandler={activeNavItemHandler}
-        >
-          <ReceiptPercentIcon
-            className={`w-5 h-5 ${
-              activeId === 4 ? 'text-indigo-500' : 'text-gray-500'
-            }`}
-          />
-        </SideItem>
+        <Link href="/invoice" className="w-full">
+          <SideItem
+            isHovered={isHovered}
+            title="صورتحساب ها"
+            id={4}
+            activeId={activeId}
+            activeNavItemHandler={activeNavItemHandler}
+          >
+            <ReceiptPercentIcon
+              className={`w-5 h-5 ${
+                activeId === 4 ? 'text-indigo-500' : 'text-gray-500'
+              }`}
+            />
+          </SideItem>
+        </Link>
 
-        <SideItem
-          isHovered={isHovered}
-          title="نقش ها و اجازه ها"
-          id={5}
-          activeId={activeId}
-          activeNavItemHandler={activeNavItemHandler}
-        >
-          <CheckBadgeIcon
-            className={`w-5 h-5 ${
-              activeId === 5 ? 'text-indigo-500' : 'text-gray-500'
-            }`}
-          />
-        </SideItem>
+        <Link href="/roles" className="w-full">
+          <SideItem
+            isHovered={isHovered}
+            title="نقش ها و اجازه ها"
+            id={5}
+            activeId={activeId}
+            activeNavItemHandler={activeNavItemHandler}
+          >
+            <CheckBadgeIcon
+              className={`w-5 h-5 ${
+                activeId === 5 ? 'text-indigo-500' : 'text-gray-500'
+              }`}
+            />
+          </SideItem>
+        </Link>
       </nav>
       <div className="absolute bottom-0 right-0 left-0 p-4">
         <SideItem

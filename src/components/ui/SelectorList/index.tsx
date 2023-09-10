@@ -14,7 +14,7 @@ export const SelectorList: FC<SelectorListProp> = ({
   return (
     <select
       defaultValue={selectorDefaultValue}
-      className="p-1 focus:outline-0 rounded-md border border-gray-300 focus:ring-1 ring-indigo-500 cursor-pointer text-gray-600 text-[15px]"
+      className="p-1 focus:outline-0 rounded-md border border-gray-300 focus:ring-1 ring-indigo-500 cursor-pointer text-gray-600 text-[14px]"
       onChange={(e) => onSelectHandler(e.target.value)}
     >
       {options &&
