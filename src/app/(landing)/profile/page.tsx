@@ -19,7 +19,8 @@ export default function InvoicePage() {
         name="جواد شهرآبادی"
         skill="توسعه دهنده وب"
         location="قزوین"
-        joinedDate="۳۱ شهریور ۱۴۰۲"
+        joinedDate="شهریور ۱۴۰۲
+         "
       />
       <ProfileContainer />
     </section>
