@@ -12,7 +12,9 @@ export const SearchBox: FC<SearchBoxProps> = ({
   return (
     <div
       className={`transition-all duration-300 ease-out ${
-        isFocused ? 'relative top-0 z-40 w-full mx-auto' : 'relative w-1/3'
+        isFocused
+          ? 'relative top-0 z-40 w-full mx-auto'
+          : 'relative lg:w-1/3 w-1/2'
       }`}
     >
       <input

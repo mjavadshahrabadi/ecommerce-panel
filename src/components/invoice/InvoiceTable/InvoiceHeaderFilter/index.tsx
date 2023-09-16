@@ -8,11 +8,11 @@ export const InvoiceHeaderFilter: FC = (): ReactElement => {
   const [selectedStatus, setSelectedStatus] = useState('Draft')
   return (
     <div className="flex items-center justify-between">
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-2 lg:space-x-4">
         <NumberFilter options={[10, 25, 50, 100]} />
         <button
           type="button"
-          className="bg-indigo-500 py-1.5 px-4 rounded-md active:scale-95 text-white text-[14px]"
+          className="hidden lg:block bg-indigo-500 py-1.5 px-4 rounded-md active:scale-95 text-white text-[14px]"
         >
           + افزودن صورتحساب
         </button>
@@ -23,7 +23,7 @@ export const InvoiceHeaderFilter: FC = (): ReactElement => {
             type="text"
             id="table-search"
             name="table-search"
-            className="p-2 rounded-md focus:outline-0 bg-gray-100 text-[14px] text-gray-600"
+            className="hidden lg:block p-2 rounded-md focus:outline-0 bg-gray-100 text-[14px] text-gray-600"
             placeholder="Serach Invoice..."
           />
         </div>
