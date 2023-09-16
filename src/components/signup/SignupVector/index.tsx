@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const SignupVector: FC = (): ReactElement => {
   return (
-    <div className="col-span-8 flex items-center justify-center bg-gray-100">
+    <div className="hidden col-span-8 lg:flex items-center justify-center bg-gray-100">
       <Image
         src="/vector/signup/img-1.png"
         alt="signup vector"

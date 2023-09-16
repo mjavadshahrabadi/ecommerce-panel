@@ -7,9 +7,8 @@ export const metadata: Metadata = {
 }
 export default function SignupPage() {
   return (
-    <section className="w-full h-screen grid grid-cols-12">
+    <section className="w-full h-screen grid grid-cols-1 lg:grid-cols-12">
       <SignupVector />
-
       <SignupForm />
     </section>
   )

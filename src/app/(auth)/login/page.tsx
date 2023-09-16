@@ -8,9 +8,8 @@ export const metadata: Metadata = {
 }
 export default function LoginPage() {
   return (
-    <section className="w-full h-screen grid grid-cols-12">
+    <section className="w-full h-screen grid grid-cols-1 lg:grid-cols-12">
       <LoginVector />
-
       <LoginForm />
     </section>
   )
