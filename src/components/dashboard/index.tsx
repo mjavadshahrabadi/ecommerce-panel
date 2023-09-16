@@ -15,37 +15,42 @@ import { TrafficSource } from '@/components/dashboard/TrafficSource'
 export const DashboardSection: FC = (): ReactElement => {
   return (
     <section className="overflow-hidden">
-      <div className="grid grid-cols-12 my-6 gap-5 items-stretch">
-        <div className="col-span-8">
-          <Congratulations />
-        </div>
-        <div className="col-span-4 grid grid-cols-2 gap-5">
-          <OrderChart />
-          <Sales />
-        </div>
-
-        <div className="col-span-8">
-          <TotalRevenue />
-        </div>
-        <div className="col-span-4 grid grid-cols-2 grid-rows-2 gap-5">
-          <Payments />
-          <Revenue />
-          <ProfileReport />
+      <div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-6">
+          <div className="w-full lg:col-span-2">
+            <Congratulations />
+          </div>
+          <div className="w-full lg:col-span-1 grid grid-cols-2 gap-5">
+            <OrderChart />
+            <Sales />
+          </div>
         </div>
 
-        <div className="col-span-4">
-          <OrderStatistics />
+        <div className="grid grid-cols-1 lg:grid-cols-3 my-6 gap-5">
+          <div className="w-full lg:col-span-2">
+            <TotalRevenue />
+          </div>
+          <div className="w-full lg:col-span-1 grid grid-cols-2 grid-rows-2 gap-5">
+            <Payments />
+            <Revenue />
+            <ProfileReport />
+          </div>
         </div>
-        <div className="col-span-4">
-          <TotalBalance />
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 items-stretch">
+          <div className="w-full">
+            <OrderStatistics />
+          </div>
+          <div className="w-full">
+            <TotalBalance />
+          </div>
+          <div className="w-full">
+            <Transactions />
+          </div>
         </div>
-        <div className="col-span-4">
-          <Transactions />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-6">
+          <ActivityTimeline />
+          <TrafficSource />
         </div>
-      </div>
-      <div className="grid grid-cols-2 gap-5">
-        <ActivityTimeline />
-        <TrafficSource />
       </div>
     </section>
   )

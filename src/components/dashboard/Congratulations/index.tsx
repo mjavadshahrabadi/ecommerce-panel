@@ -10,7 +10,7 @@ export const Congratulations: FC = (): ReactElement => {
           width={0}
           height={0}
           sizes="100vw"
-          className="w-auto h-[150px]"
+          className="w-auto h-[150px] object-cover"
         />
       </div>
       <div className="col-span-8 p-5 flex flex-col items-end space-y-3">
