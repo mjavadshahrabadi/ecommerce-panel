@@ -14,7 +14,7 @@ import { Pagination } from '@/components/ui/Pagination'
 
 export const DataTable: FC = (): ReactElement => {
   return (
-    <>
+    <div className="overflow-x-scroll pb-5 lg:pb-0 lg:overflow-x-hidden">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-4">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 text-center">
           <tr>
@@ -43,6 +43,6 @@ export const DataTable: FC = (): ReactElement => {
         </tbody>
       </table>
       <Pagination pages={5} />
-    </>
+    </div>
   )
 }

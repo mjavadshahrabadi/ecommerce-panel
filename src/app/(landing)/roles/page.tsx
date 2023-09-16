@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function RolesPage() {
   return (
-    <section className="w-full mx-10 col-span-11 p-3">
+    <section className="xl:mx-10 w-full col-span-12 xl:col-span-11 p-5 overflow-hidden">
       <Header />
       <RolesHeader />
       <RolesTypeList />

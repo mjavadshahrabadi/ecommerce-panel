@@ -33,9 +33,9 @@ export const Export: FC = (): ReactElement => {
   }, [])
 
   return (
-    <div className="relative">
+    <div className="relative hidden lg:block">
       <div
-        className="flex items-center p-2 rounded-md space-x-2 bg-gray-100 cursor-pointer hover:bg-gray-200 duration-300 ease-out"
+        className="flex items-center p-1.5 lg:p-2 rounded-md space-x-2 bg-gray-100 cursor-pointer hover:bg-gray-200 duration-300 ease-out"
         ref={exportRef}
         onClick={() => setIsOptionShow((prev) => !prev)}
       >

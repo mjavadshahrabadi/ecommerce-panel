@@ -45,7 +45,7 @@ export const Sidebar: FC = (): ReactElement => {
 
   return (
     <aside
-      className={`overflow-hidden bg-white fixed z-50 top-0 bottom-0 right-0 duration-300 ease-out border-l border-gray-100 shadow-sm py-7 ${
+      className={`hidden xl:block overflow-hidden bg-white fixed z-50 top-0 bottom-0 right-0 duration-300 ease-out border-l border-gray-100 shadow-sm py-7 ${
         !isHovered ? 'w-[4vw]' : 'w-[14vw] px-4'
       }`}
       onMouseEnter={handleMouseEvent}

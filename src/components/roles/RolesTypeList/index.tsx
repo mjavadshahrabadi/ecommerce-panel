@@ -4,7 +4,7 @@ import { AddNewRole } from '@/components/roles/AddNewRole'
 
 export const RolesTypeList: FC = (): ReactElement => {
   return (
-    <ul className="grid grid-cols-3 gap-5">
+    <ul className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       <RolesTypeItem role="سرپرست" totalNumber={4} />
       <RolesTypeItem role="مدیر" totalNumber={7} />
       <RolesTypeItem role="پشتیبانی" totalNumber={10} />

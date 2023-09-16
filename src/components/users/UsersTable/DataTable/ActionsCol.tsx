@@ -42,8 +42,8 @@ export const ActionsCol: FC = (): ReactElement => {
           <EllipsisVerticalIcon className="w-5 h-5 text-gra-700 cursor-pointer" />
           {isOptionsShow && (
             <DropdownList width={10}>
-              <DropDownItem>1</DropDownItem>
-              <DropDownItem>2</DropDownItem>
+              <DropDownItem>ویرایش</DropDownItem>
+              <DropDownItem>حذف</DropDownItem>
             </DropdownList>
           )}
         </div>
