@@ -23,7 +23,7 @@ export const About: FC<AboutProps> = ({
   fullName,
 }): ReactElement => {
   return (
-    <div className="flex flex-col items-end space-y-3">
+    <div className="w-full flex flex-col items-end space-y-3">
       <span className="text-gray-700 text-[15px] font-semibold">درباره من</span>
       <div className="flex items-center space-x-2">
         <span className="text-sm text-gray-700">
